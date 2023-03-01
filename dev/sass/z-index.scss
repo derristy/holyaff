@@ -1,0 +1,15 @@
+.caja {
+    z-index: 2;
+
+    &_trasera {
+        z-index: 1;
+    }
+
+    &_tapa {
+        z-index: 3;
+    }
+
+    &_gift {
+        z-index: 1;
+    }
+}
