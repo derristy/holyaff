@@ -114,7 +114,7 @@ $(".temblor").click((event) => {
 });
 
 function addComment(comment){
-    $("#comment_section").prepend("<div class=\"comments\" style=\"display:block\"><div class=\"profile\"><img src=\"assets/images/guest.png\"></div><div class=\"comment-content\"><p class=\"name\">Guest</p><p>"+comment+"</p></div><div class=\"clr\"></div><div class=\"comment-status\"><span>Curte·comente<img src=\"assets/images/like.png\" width=\"15\" height=\"15\">0</span><small>·</small><small><u>now</u></small><small><u></u></small></div></div>");
+    $("#comment_section").prepend("<div class=\"comments\"><div class=\"profile\"><img src=\"assets/images/guest.png\"></div><div class=\"comment-content\"><p class=\"name\">Guest</p><p>"+comment+"</p></div><div class=\"clr\"></div><div class=\"comment-status\"><span>Curte·comente<img src=\"assets/images/like.png\" width=\"15\" height=\"15\">0</span><small> · </small><small><u>now</u></small><small><u></u></small></div></div>");
 }
 
 $(".comment-button").click(() => {
