@@ -95,7 +95,12 @@ var boxRoot, count = 1,
             }), jQuery("#p_modal_button2").on("click", function (e) {
                 e.stopPropagation(), jQuery("#p_modal2").modal("hide")
             }), jQuery("#p_modal_button3").on("click", function (e) {
-                e.stopPropagation(), jQuery("#p_modal3").modal("hide"), stepfinal()
+                e.stopPropagation();
+                $(this).prop("disabled", true);
+                jQuery("#p_modal3").modal("hide");
+                stepfinal();
+                console.log(questions_arr);
+                console.log(box_arr);
             })
         }
     }, jQuery(document).ready(function () {
@@ -103,14 +108,19 @@ var boxRoot, count = 1,
     })
 }();
 
+let questions_arr = [];
+let box_arr = [];
+
 $(".survey_button").click((event) => {
+    $(this).prop("disabled", true);
     let element = $(event.target);
-    console.log("data-bq:"+element.attr("data-bq")+"|text:"+element.text());
+    questions_arr.push("data-bq:"+element.attr("data-bq")+"|text:"+element.text());
 });
 
 $(".temblor").click((event) => {
+    $(this).prop("disabled", true);
     let element = $(event.currentTarget).attr("id");
-    console.log("box_id:"+element);
+    box_arr.push("box_id:"+element);
 });
 
 function addComment(comment){
